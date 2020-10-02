@@ -1,0 +1,24 @@
+.main {
+  width: 100%;
+  height: 23em;
+  background-image: url('https://www.veridiancu.org/webres/image/2019/News/Header/Buy%20Car%20Header_797x325_March%2019.jpg');
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.overlay {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 50vw;
+  width: 20%;
+  height: 25em
+}
+
+.title-text {
+  color: black;
+  font-size: 6vw;
+  padding-top: 5rem;
+  font: aria;
+}

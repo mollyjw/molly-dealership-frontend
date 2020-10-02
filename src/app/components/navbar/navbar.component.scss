@@ -1,0 +1,44 @@
+.navbar {
+  background-color: #007abb;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: white;
+  text-transform: uppercase;
+}
+
+.btn {
+  border-color: transparent;
+  color: black;
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.btn:hover {
+  border-color: black;
+  background-color: white;
+  border-width: 2px;
+}
+
+.btn:active {
+  background-color: #E59E46;
+}
+
+.search-field {
+  background-color: white;
+  border-color: black;
+  border-radius: 25px;
+  border-width: 1px;
+}
+
+.search-field:hover {
+  border-width: 2px;
+}
+
+.search-field:focus {
+  background-color: #e3e5e6;
+}
