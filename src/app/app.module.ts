@@ -14,6 +14,7 @@ import { UserService } from './shared/services/user.service';
 import { CarService } from './shared/services/car.service';
 import { LocalStorageService } from './shared/services/local-storage.service'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     LoginComponent,
     HomeComponent,
     HeaderComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

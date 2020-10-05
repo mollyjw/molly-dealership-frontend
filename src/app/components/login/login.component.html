@@ -6,115 +6,36 @@
       <div class="col-md left-table">
         <h1>Welcome Back!</h1>
         <h2>Log-In</h2>
-        <form>
+        <form [formGroup]="loginForm">
           <div class="form-group row">
             <div class="col">
-              <input type="text" class="form-control" placeholder="Email">
+              <input [ngClass]="{'is-invalid': hasError && loginForm.get('email').errors}" class="form-control"
+                type="text" formControlName="email" placeholder="Email">
+              <label class="form-error" *ngIf="hasError && loginForm.get('email').errors">
+                <span class="text-danger" *ngIf="loginForm.get('email').errors['required']">
+                  Email is required!
+                </span>
+              </label>
             </div>
           </div>
 
           <div class="form-group row">
             <div class="col">
-              <input type="text" class="form-control" placeholder="Password">
+              <input [ngClass]="{'is-invalid': hasError && loginForm.get('password').errors}" class="form-control"
+                type="text" formControlName="password" placeholder="Password">
+              <label class="form-error" *ngIf="hasError && loginForm.get('password').errors">
+                <span class="text-danger" *ngIf="loginForm.get('password').errors['required']">
+                  Password is required!
+                </span>
+              </label>
             </div>
           </div>
-          <button type="submit" class="btn">Log-In!</button>
+          <button type="submit" class="btn" (click)="submitLoginForm()">Log-In!</button>
         </form>
       </div>
-
-      <div class="col-md right-table">
-        <h1>New Here?</h1>
-        <h2>Sign-Up</h2>
-        <form [formGroup]="signupForm">
-            <div class="form-group row">
-              <div class="col">
-                <input [ngClass]="{'is-invalid':hasError && signupForm.get('firstName').errors}" type="text" class="form-control" formControlName="firstName" placeholder="First name">
-                <label class="form-error" *ngIf="hasError && signupForm.get('firstName').errors">
-                  <span class="text-danger" *ngIf="signupForm.get('firstName').errors['required']">
-                    First Name is required!
-                  </span>
-                </label>
-              </div>
-              <div class="col">
-                <input [ngClass]="{'is-invalid':hasError && signupForm.get('lastName').errors}" type="text" class="form-control" formControlName="lastName" placeholder="Last name">
-                <label class="form-error" *ngIf="hasError && signupForm.get('lastName').errors">
-                  <span class="text-danger" *ngIf="signupForm.get('lastName').errors['required']">
-                    Last Name is required!
-                  </span>
-                </label>
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <div class="col">
-                <input [ngClass]="{'is-invalid':hasError && signupForm.get('nickName').errors}" type="text" class="form-control" formControlName="nickName" placeholder="Account Nickname">
-                <label class="form-error" *ngIf="hasError && signupForm.get('nickName').errors">
-                  <span class="text-danger" *ngIf="signupForm.get('nickName').errors['required']">
-                    Nickname is required!
-                  </span>
-                </label>
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <div class="col">
-                <input [ngClass]="{'is-invalid':hasError && signupForm.get('email').errors}" type="text" class="form-control" formControlName="email" placeholder="Email">
-                <label class="form-error" *ngIf="hasError && signupForm.get('email').errors">
-                  <span class="text-danger" *ngIf="signupForm.get('email').errors['required']">
-                    Email is required!
-                  </span>
-                </label>
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <div class="col">
-                <input [ngClass]="{'is-invalid':hasError && signupForm.get('password').errors}" type="text" class="form-control" formControlName="password" placeholder="Password">
-                <label class="form-error" *ngIf="hasError && signupForm.get('password').errors">
-                  <span class="text-danger" *ngIf="signupForm.get('password').errors['required']">
-                    Password is required!
-                  </span>
-                  <span class="text-danger" *ngIf="signupForm.get('password').errors['minlength']">
-                    Password  does not meet minimum length requirement!
-                  </span>
-                  <span class="text-danger" *ngIf="signupForm.get('password').errors['maxlength']">
-                    Password exceedes maximum length!
-                  </span>
-                </label>
-                <label class="form-error" *ngIf="sf.passwordConfirmation.errors && sf.passwordConfirmation.errors.mustMatch">
-                  <span class="text-danger">
-                    Password and Password Confirmation Must Match.
-                  </span>
-                </label>
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <div class="col">
-                <input [ngClass]="{'is-invalid':hasError && signupForm.get('passwordConfirmation').errors}" type="text" class="form-control" formControlName="passwordConfirmation" placeholder="Password Confirmation">
-                <label class="form-error" *ngIf="hasError && signupForm.get('passwordConfirmation').errors">
-                  <span class="text-danger" *ngIf="signupForm.get('passwordConfirmation').errors['required']">
-                    Password Confirmation is required!
-                  </span>
-                  <span class="text-danger" *ngIf="signupForm.get('passwordConfirmation').errors['minlength']">
-                    Password Confirmation does not meet minimum length requirement!
-                  </span>
-                  <span class="text-danger" *ngIf="signupForm.get('passwordConfirmation').errors['maxlength']">
-                    Password Confirmation exceedes maximum length!
-                  </span>
-                </label>
-                <label class="form-error" *ngIf="sf.passwordConfirmation.errors && sf.passwordConfirmation.errors.mustMatch">
-                  <span class="text-danger">
-                    Password and Password Confirmation Must Match.
-                  </span>
-                </label>
-              </div>
-            </div>
-            <button type="submit" class="btn" (click)="submitSignupForm()">Sign-Up!</button>
-        </form>
     </div>
   </div>
 
 
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>

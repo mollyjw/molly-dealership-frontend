@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { User } from 'src/app/shared/services/models/user';
 import { UserService } from 'src/app/shared/services/user.service';
-import { MustMatch } from './must-match-validator'
 
 @Component({
   selector: 'app-login',
@@ -14,8 +13,6 @@ import { MustMatch } from './must-match-validator'
 export class LoginComponent implements OnInit, OnDestroy {
   loginForm: FormGroup
   loginFormValues: any
-  signupForm: FormGroup
-  signupFormValues: any
   submitting = false
   hasError = false
   errorMsg: string
@@ -28,52 +25,34 @@ export class LoginComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.createSignupControls()
-    this.createSignupForm()
-
+    this.createLoginControls()
+    this.createLoginForm()
   }
 
-  createSignupControls() {
-    this.signupFormValues = {
-      firstName: ['', Validators.compose([Validators.required])],
-      lastName: ['', Validators.compose([Validators.required])],
-      nickName: ['', Validators.compose([Validators.required])],
-      email: ['', Validators.compose([Validators.required])],
-      password: ['', Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(10)])],
-      passwordConfirmation: ['', Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(10)])]
+  createLoginControls() {
+    this.loginFormValues = {
+      email: ['', Validators.required],
+      password: ['', Validators.required]
     }
   }
 
-  createSignupForm() {
-    this.signupForm = this.fb.group(this.signupFormValues, { validator: MustMatch('password', 'passwordConfirmation')})
+  createLoginForm() {
+    this.loginForm = this.fb.group(this.loginFormValues)
   }
 
-  // getter method for form controls
-  get sf() {
-    if (this.signupForm && this.signupForm.controls) {
-      return this.signupForm.controls
-    }
-  }
-
-  submitSignupForm() {
+  submitLoginForm() {
     this.hasError = false
     this.submitting = true
-    if (this.signupForm.invalid) {
+    this.errorMsg = null
+    if (this.loginForm.invalid) {
       this.hasError = true
       this.submitting = false
       return
     }
-    const signupForm = this.signupForm.value
-    const params = {
-      first_name: signupForm.firstName,
-      last_name: signupForm.lastName,
-      nickname: signupForm.nickName,
-      email: signupForm.email,
-      password: signupForm.password,
-      password_confirmation: signupForm.passwordConfirmation
-    }
+    const form = this.loginForm.value
+    const params = { email: form.email, password: form.password }
     this.subs.add(
-      this.userService.signup(params).subscribe(data => {
+      this.userService.login(params).subscribe(data => {
         if (data && data.success && data.user) {
           this.currentUser = data.user
           this.submitting = false
@@ -81,21 +60,16 @@ export class LoginComponent implements OnInit, OnDestroy {
         }
       }, error => {
         if (error) {
-          console.log(error)
           this.submitting = false
-          this.errorMsg = 'User already exists'
+          this.hasError = true
+          this.errorMsg = 'Email and Password combination not recognized.'
         }
       })
     )
   }
 
-  cancelSignupForm() {
-    this.signupForm.reset()
-  }
-
   ngOnDestroy() {
     this.subs.unsubscribe()
-
   }
 
 }

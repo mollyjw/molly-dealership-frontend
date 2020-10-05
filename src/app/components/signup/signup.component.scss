@@ -1,30 +1,29 @@
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 0px;
-    margin-left: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 0px;
+  margin-left: -15px;
 }
 
 body {
-  background-color: #EFE2BA;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  text-align: center;
+background-color:whitesmoke;
+height: 100%;
+width: 100%;
+padding-top: 5%;
+padding-bottom: 5%;
+text-align: center;
 }
 
-
-.left-table {
-  background-color: whitesmoke;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-}
-
-.right-table {
+.container-sm {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 3%;
   background-color: #369fd9;
-  margin: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 3%;
@@ -59,3 +58,4 @@ body {
 .btn:active {
   background-color: #E59E46;
 }
+
