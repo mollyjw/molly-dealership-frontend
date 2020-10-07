@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://cors-anywhere.herokuapp.com/https://vehicle-dealership.herokuapp.com/'
+  apiUrl: 'https://vehicle-dealership.herokuapp.com/'
 };
 
 /*
