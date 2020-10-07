@@ -1,46 +1,37 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: 0px;
-    margin-left: -15px;
 }
 
 body {
-  background-color: #EFE2BA;
-  margin: 0;
+  background-color: whitesmoke;
   height: 100%;
   width: 100%;
   text-align: center;
 }
 
 
-.left-table {
-  background-color: whitesmoke;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-}
-
-.right-table {
-  background-color: #369fd9;
-  margin: 0;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 3%;
-  padding-bottom: 3%;
+.form-container {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 3%;
+  background-color: #44b8a1;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .form-row {
-  padding-top: 3%;
-  padding-bottom: 3%;
-  padding-right: 3%;
-  padding-right: 3%;
-}
-
-.col {
-  padding-right: 1%;
-  padding-left: 1%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-right: 10%;
+  padding-right: 10%;
 }
 
 .btn {

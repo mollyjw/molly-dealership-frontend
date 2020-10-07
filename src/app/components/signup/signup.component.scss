@@ -1,20 +1,16 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: 0px;
-  margin-left: -15px;
 }
 
 body {
 background-color:whitesmoke;
 height: 100%;
 width: 100%;
-padding-top: 5%;
-padding-bottom: 5%;
 text-align: center;
 }
 
-.container-sm {
+.form-container {
   border-width: 2px;
   border-color: black;
   border-style: solid;
@@ -22,24 +18,19 @@ text-align: center;
   background-color: #369fd9;
   margin-top: 5%;
   margin-bottom: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-top: 3%;
   padding-bottom: 3%;
 }
 
 .form-row {
-  padding-top: 3%;
-  padding-bottom: 3%;
-  padding-right: 3%;
-  padding-right: 3%;
-}
-
-.col {
-  padding-right: 1%;
-  padding-left: 1%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-right: 10%;
+  padding-right: 10%;
 }
 
 .btn {
@@ -58,4 +49,34 @@ text-align: center;
 .btn:active {
   background-color: #E59E46;
 }
+
+
+// .form-group {
+//   padding-top: 5%;
+//   padding-bottom: 5%;
+//   padding-right: 5%;
+//   padding-right: 5%;
+// }
+
+// .col {
+//   padding-right: 1%;
+//   padding-left: 1%;
+// }
+
+// .btn {
+//   margin-top: 3%;
+//   background-color: whitesmoke;
+//   border-style: solid;
+//   border-color: black;
+// }
+
+// .btn:hover {
+//   border-color: black;
+//   background-color: white;
+//   border-width: 2px;
+// }
+
+// .btn:active {
+//   background-color: #E59E46;
+// }
 

@@ -1,0 +1,19 @@
+<!--Movie Code Example-->
+<!-- <div class="container">
+  <div class="row card-row">
+      <div *ngFor="let car of cars" class="col-12 mt-5">
+        <app-car-card [car]="car"></app-car-card>
+      </div>
+  </div>
+</div> -->
+
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2">
+    <div *ngFor="let car of cars" class="col mb-4">
+      <app-car-card [car]="car"></app-car-card>
+    </div>
+  </div>
+</div>
+
