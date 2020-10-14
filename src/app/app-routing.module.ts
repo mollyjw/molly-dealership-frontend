@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { ImportComponent } from './components/import/import.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,11 @@ const routes: Routes = [
   {
     path: 'allcars',
     component: AllcarsComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'importcar',
+    component: ImportComponent,
     pathMatch: 'full'
   }
 ];

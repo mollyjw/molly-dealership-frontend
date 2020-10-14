@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import { Car } from 'src/app/shared/services/models/car'
 
 @Component({
@@ -14,4 +14,13 @@ export class CarCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngOnChanges() {
+    if (this.car) {
+      this.carImg = this.car.image
+    }
+  }
+
+  setDefautlPic() {
+    this.carImg = 'assets/images/Wheely_Good_Name.jpg'
+  }
 }

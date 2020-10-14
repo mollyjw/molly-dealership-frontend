@@ -1,0 +1,108 @@
+<app-navbar></app-navbar>
+
+<div class="form-container">
+  <form>
+    <div class="row">
+      <div class="col">
+        <select class="custom-select">
+          <option selected>Make</option>
+          <option value="1">Acura</option>
+          <option value="2">Audi</option>
+          <option value="3">BMW</option>
+          <option value="4">Buick</option>
+          <option value="5">Cadillac</option>
+          <option value="6">Chevrolet</option>
+          <option value="7">Crysler</option>
+          <option value="8">Dodge</option>
+          <option value="9">Ford</option>
+          <option value="10">GMC</option>
+          <option value="11">Honda</option>
+          <option value="12">Hyundai</option>
+          <option value="13">Infiniti</option>
+          <option value="14">Jeep</option>
+          <option value="15">Kia</option>
+          <option value="16">Lexus</option>
+          <option value="17">Lincoln</option>
+          <option value="18">Mazda</option>
+          <option value="19">Mercedes</option>
+          <option value="20">Mercury</option>
+          <option value="21">Mitsubishi</option>
+          <option value="22">Nissan</option>
+          <option value="23">Pontiac</option>
+          <option value="24">Porsche</option>
+          <option value="25">Ram</option>
+          <option value="26">Saturn</option>
+          <option value="27">Subaru</option>
+          <option value="28">Toyota</option>
+          <option value="29">Volkswagen</option>
+          <option value="30">Volvo</option>
+          <option value="31">Other</option>
+        </select>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Model">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <select class="custom-select">
+          <option selected>Bodystyle</option>
+          <option value="1">Chassis</option>
+          <option value="2">Convertible</option>
+          <option value="3">Coupe</option>
+          <option value="4">Hatchback</option>
+          <option value="5">Minivan</option>
+          <option value="6">Pickup</option>
+          <option value="7">Sedan</option>
+          <option value="8">SUV</option>
+          <option value="9">Van</option>
+          <option value="10">Wagon</option>
+        </select>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Color">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Year Manufactured">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Year Bought by Previous Owner">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Mileage">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+          <label class="form-check-label" for="inlineRadio1">New</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+          <label class="form-check-label" for="inlineRadio2">Used</label>
+        </div>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Price">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Image URL">
+      </div>
+    </div>
+    <div class="form-footer-btns form-group">
+      <div class="col">
+        <button type="submit" class="btn btn-primary btn-block" (click)="submitForm()" >Import Car<fa-icon
+          *ngIf="submitting" [icon]="['fas', 'plus']" size="lg" class="ml-2 fa-spinner" spin="true">
+        </fa-icon></button>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+

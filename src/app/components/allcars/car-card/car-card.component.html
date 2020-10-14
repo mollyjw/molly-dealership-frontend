@@ -1,10 +1,16 @@
 <div *ngIf="car" class="card w-100">
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
+    <img [src]="carImg" class="card-img-top" alt="image of car" (error)="setDefautlPic()">
     <div class="card-body">
-      <h5 class="card-title">{{car.make}} {{car.model}} <span class="ml-2 card-year">{{car.year}}</span> </h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.
-        This content is a little bit longer.</p>
+      <h3 class="card-title">{{car.make}} {{car.model}} <span class="ml-3 card-year">{{car.price |currency}}</span> </h3>
+      <div class="car-info w-100 d-inline-flex">
+        <div class="flex">
+          <h5>Color: {{car.color}}</h5>
+          <h5>Bodystyle: {{car.bodystyle}}</h5>
+          <h5>Mileage: {{car.mileage}} miles</h5>
+          <h5>Condition: {{car.condition}}</h5>
+        </div>
+      </div>
     </div>
   </div>
 </div>

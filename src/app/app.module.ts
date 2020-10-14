@@ -17,6 +17,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
 import { AllcarsComponent } from './components/allcars/allcars.component';
 import { CarCardComponent } from './components/allcars/car-card/car-card.component';
+import { faAngleLeft, faAngleRight, faArrowRight, faCarSide, faCircle, faEdit, faEye, faEyeSlash, faHome, faKey, faPen, faPlus, faSearch, faSignInAlt, faSignOutAlt, faSpinner, faStar, faStarHalfAlt, faTrashAlt, faUpload, faUser, faUserPlus, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { ImportComponent } from './components/import/import.component';
+import { AddEditCarComponent } from './components/add-edit-car/add-edit-car.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,8 @@ import { CarCardComponent } from './components/allcars/car-card/car-card.compone
     SignupComponent,
     AllcarsComponent,
     CarCardComponent,
+    ImportComponent,
+    AddEditCarComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +57,6 @@ export class AppModule {
   constructor(
     private library: FaIconLibrary
   ) {
-    this.library.addIcons()
+    this.library.addIcons(faHome, faSpinner, faAngleLeft, faAngleRight, faPlus, faStar, faStarHalfAlt, faArrowRight, faUpload, faVideo, faEdit, faPen, faTrashAlt, faSearch, faUser, faKey, faEye, faEyeSlash, faSignInAlt, faSignOutAlt, faUserPlus, faCircle, faCarSide)
   }
 }

@@ -18,6 +18,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.subscribeToCurrentUser
   }
 
   subscribeToCurrentUser() {
@@ -32,6 +33,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
    )
   }
 
+
   logoutUser() {
     this.userService.logoutUser()
   }
@@ -39,5 +41,4 @@ export class NavbarComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.subs.unsubscribe()
   }
-
 }

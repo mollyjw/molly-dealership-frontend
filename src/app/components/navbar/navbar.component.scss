@@ -2,13 +2,28 @@
   background-color: #007abb;
 }
 
+.navbar-item {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
 a {
   color: black;
+  padding-right: 0rem;
+  padding-left: 0rem;
 }
 
 a:hover {
   color: white;
-  text-transform: uppercase;
+  // text-transform: uppercase;
+}
+
+
+.welcome{
+  color: white;
+  font-variant: small-caps;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-size: 1.5em;
 }
 
 .btn {
