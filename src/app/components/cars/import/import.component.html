@@ -1,6 +1,9 @@
 <app-navbar></app-navbar>
 
 <div class="form-container">
+  <h2>
+    Import a New Car
+  </h2>
   <form>
     <div class="row">
       <div class="col">
@@ -70,12 +73,13 @@
       <div class="col">
         <input type="text" class="form-control" placeholder="Year Bought by Previous Owner">
       </div>
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Mileage">
-      </div>
     </div>
     <div class="row">
       <div class="col">
+        <input type="text" class="form-control" placeholder="Mileage">
+      </div>
+      <div class="col" id="radio">
+        Condition:
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
           <label class="form-check-label" for="inlineRadio1">New</label>
@@ -96,7 +100,7 @@
     </div>
     <div class="form-footer-btns form-group">
       <div class="col">
-        <button type="submit" class="btn btn-primary btn-block" (click)="submitForm()" >Import Car<fa-icon
+        <button type="submit" class="btn" (click)="submitForm()" >Import Car<fa-icon
           *ngIf="submitting" [icon]="['fas', 'plus']" size="lg" class="ml-2 fa-spinner" spin="true">
         </fa-icon></button>
       </div>

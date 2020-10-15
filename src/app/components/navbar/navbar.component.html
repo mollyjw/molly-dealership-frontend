@@ -10,7 +10,7 @@
         <a class="nav-link" [routerLink]="['/importcar']" routerLink="active">Import a New Car <fa-icon [icon]="['fas', 'plus']" size="sm"></fa-icon> </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" (click)="logoutUser()">
+        <a class="nav-link" [routerLink]="['/home']" routerLink="active" (click)="logoutUser()">
           Sign Out <fa-icon [icon]="['fas', 'sign-out-alt']" size="sm"></fa-icon>
         </a>
       </li>

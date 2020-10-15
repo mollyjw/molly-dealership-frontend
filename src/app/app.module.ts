@@ -15,11 +15,10 @@ import { CarService } from './shared/services/car.service';
 import { LocalStorageService } from './shared/services/local-storage.service'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
-import { AllcarsComponent } from './components/allcars/allcars.component';
-import { CarCardComponent } from './components/allcars/car-card/car-card.component';
+import { AllcarsComponent } from './components/cars/allcars/allcars.component';
+import { CarCardComponent } from './components/cars/allcars/car-card/car-card.component';
 import { faAngleLeft, faAngleRight, faArrowRight, faCarSide, faCircle, faEdit, faEye, faEyeSlash, faHome, faKey, faPen, faPlus, faSearch, faSignInAlt, faSignOutAlt, faSpinner, faStar, faStarHalfAlt, faTrashAlt, faUpload, faUser, faUserPlus, faVideo } from '@fortawesome/free-solid-svg-icons';
-import { ImportComponent } from './components/import/import.component';
-import { AddEditCarComponent } from './components/add-edit-car/add-edit-car.component';
+import { ImportComponent } from './components/cars/import/import.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +31,6 @@ import { AddEditCarComponent } from './components/add-edit-car/add-edit-car.comp
     AllcarsComponent,
     CarCardComponent,
     ImportComponent,
-    AddEditCarComponent,
   ],
   imports: [
     BrowserModule,

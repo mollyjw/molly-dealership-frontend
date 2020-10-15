@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AllcarsComponent } from './components/allcars/allcars.component';
+import { AllcarsComponent } from './components/cars/allcars/allcars.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { ImportComponent } from './components/import/import.component';
+import { ImportComponent } from './components/cars/import/import.component';
 
 const routes: Routes = [
   {
@@ -37,7 +37,7 @@ const routes: Routes = [
     path: 'importcar',
     component: ImportComponent,
     pathMatch: 'full'
-  }
+  },
 ];
 
 @NgModule({

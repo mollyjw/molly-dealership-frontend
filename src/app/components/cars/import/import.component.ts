@@ -81,8 +81,8 @@ export class ImportComponent implements OnInit {
     }
     this.subs.add(
       this.carService.importCar(params).subscribe(data => {
-        if (data && data.success && data.user) {
-          this.submitting = false
+        if (data && data.success) {
+          this.submitting = true
           this.router.navigate(['/allcars'])
       }
      })
