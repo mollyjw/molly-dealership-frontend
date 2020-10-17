@@ -23,7 +23,7 @@ export class AllcarsComponent implements OnInit {
       if (cars) {
         this.cars = cars
       }
-      debugger
+      // debugger
     }, error => {
       if (error) {
         console.log(error)

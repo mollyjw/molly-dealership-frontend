@@ -36,7 +36,7 @@ const routes: Routes = [
   {
     path: 'importcar',
     component: ImportComponent,
-    pathMatch: 'full'
+    // pathMatch: 'full'
   },
 ];
 

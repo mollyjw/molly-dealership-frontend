@@ -4,98 +4,101 @@
   <h2>
     Import a New Car
   </h2>
-  <form>
-    <div class="row">
+  <form [formGroup]="form">
+    <div class="form-group row">
       <div class="col">
-        <select class="custom-select">
+        <select class="custom-select" class="form-control" formControlName="make">
           <option selected>Make</option>
-          <option value="1">Acura</option>
-          <option value="2">Audi</option>
-          <option value="3">BMW</option>
-          <option value="4">Buick</option>
-          <option value="5">Cadillac</option>
-          <option value="6">Chevrolet</option>
-          <option value="7">Crysler</option>
-          <option value="8">Dodge</option>
-          <option value="9">Ford</option>
-          <option value="10">GMC</option>
-          <option value="11">Honda</option>
-          <option value="12">Hyundai</option>
-          <option value="13">Infiniti</option>
-          <option value="14">Jeep</option>
-          <option value="15">Kia</option>
-          <option value="16">Lexus</option>
-          <option value="17">Lincoln</option>
-          <option value="18">Mazda</option>
-          <option value="19">Mercedes</option>
-          <option value="20">Mercury</option>
-          <option value="21">Mitsubishi</option>
-          <option value="22">Nissan</option>
-          <option value="23">Pontiac</option>
-          <option value="24">Porsche</option>
-          <option value="25">Ram</option>
-          <option value="26">Saturn</option>
-          <option value="27">Subaru</option>
-          <option value="28">Toyota</option>
-          <option value="29">Volkswagen</option>
-          <option value="30">Volvo</option>
-          <option value="31">Other</option>
+          <option value="Acura">Acura</option>
+          <option value="Audi">Audi</option>
+          <option value="BMW">BMW</option>
+          <option value="Buick">Buick</option>
+          <option value="Cadillac">Cadillac</option>
+          <option value="Chevrolet">Chevrolet</option>
+          <option value="Crysler">Crysler</option>
+          <option value="Dodge">Dodge</option>
+          <option value="Ford">Ford</option>
+          <option value="GMC">GMC</option>
+          <option value="Honda">Honda</option>
+          <option value="Hyundai">Hyundai</option>
+          <option value="Infiniti">Infiniti</option>
+          <option value="Jeep">Jeep</option>
+          <option value="Kia">Kia</option>
+          <option value="Lexus">Lexus</option>
+          <option value="Lincoln">Lincoln</option>
+          <option value="Mazda">Mazda</option>
+          <option value="Mercedes">Mercedes</option>
+          <option value="Mercury">Mercury</option>
+          <option value="Mitsubishi">Mitsubishi</option>
+          <option value="Nissan">Nissan</option>
+          <option value="Pontiac">Pontiac</option>
+          <option value="Porsche">Porsche</option>
+          <option value="Ram">Ram</option>
+          <option value="Saturn">Saturn</option>
+          <option value="Subaru">Subaru</option>
+          <option value="Toyota">Toyota</option>
+          <option value="Volkwagen">Volkswagen</option>
+          <option value="Volvo">Volvo</option>
+          <option value="Other">Other</option>
         </select>
       </div>
       <div class="col">
-        <input type="text" class="form-control" placeholder="Model">
+        <input type="text" class="form-control" formControlName="model" placeholder="Model">
       </div>
     </div>
-    <div class="row">
+    <div class="form-group row">
       <div class="col">
-        <select class="custom-select">
+        <select class="custom-select" class="form-control" formControlName="bodystyle" placeholder="Make">
           <option selected>Bodystyle</option>
-          <option value="1">Chassis</option>
-          <option value="2">Convertible</option>
-          <option value="3">Coupe</option>
-          <option value="4">Hatchback</option>
-          <option value="5">Minivan</option>
-          <option value="6">Pickup</option>
-          <option value="7">Sedan</option>
-          <option value="8">SUV</option>
-          <option value="9">Van</option>
-          <option value="10">Wagon</option>
+          <option value="Chassis">Chassis</option>
+          <option value="Convertible">Convertible</option>
+          <option value="Coupe">Coupe</option>
+          <option value="Hatchback">Hatchback</option>
+          <option value="Minivan">Minivan</option>
+          <option value="Pickup">Pickup</option>
+          <option value="Sedan">Sedan</option>
+          <option value="SUV">SUV</option>
+          <option value="Van">Van</option>
+          <option value="Wagon">Wagon</option>
         </select>
       </div>
       <div class="col">
-        <input type="text" class="form-control" placeholder="Color">
+        <input type="text" class="form-control" formControlName="color" placeholder="Color">
       </div>
     </div>
-    <div class="row">
+    <div class="row-group row">
       <div class="col">
-        <input type="text" class="form-control" placeholder="Year Manufactured">
+        <input type="text" class="form-control" formControlName="year" placeholder="Year">
       </div>
       <div class="col">
-        <input type="text" class="form-control" placeholder="Year Bought by Previous Owner">
+        <input type="text" class="form-control" formControlName="purchase_year" placeholder="Purchase Year">
       </div>
     </div>
-    <div class="row">
+    <div class="row-group row">
       <div class="col">
-        <input type="text" class="form-control" placeholder="Mileage">
+        <input type="text" class="form-control" formControlName="mileage" placeholder="Mileage">
       </div>
-      <div class="col" id="radio">
+      <div class="col">
+        <input type="text" class="form-control" formControlName="condition" placeholder="Condition">
+      </div>
+      <!-- <div class="col" id="radio">
         Condition:
-        <div class="form-check form-check-inline">
+        <div class="form-check form-check-inline" class="form-control" formControlName="condition">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
           <label class="form-check-label" for="inlineRadio1">New</label>
         </div>
-        <div class="form-check form-check-inline">
+        <div class="form-check form-check-inline" class="form-control" formControlName="condition">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
           <label class="form-check-label" for="inlineRadio2">Used</label>
         </div>
-      </div>
+      </div> -->
       <div class="col">
-        <input type="text" class="form-control" placeholder="Price">
+        <input type="text" class="form-control" formControlName="price" placeholder="Price">
       </div>
     </div>
-    <div class="row">
+    <div class="form-group row">
       <div class="col">
-        <input type="text" class="form-control" placeholder="Image URL">
+        <input type="text" class="form-control" formControlName="image" placeholder="Image URL">
       </div>
     </div>
     <div class="form-footer-btns form-group">
