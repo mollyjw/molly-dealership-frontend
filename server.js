@@ -14,10 +14,10 @@ const app = express();
 
 // app.use(forceSsl);
 
-app.use(express.static('./dist/wheely-good-cars'));
+app.use(express.static('./dist/molly-dealership-frontend'));
 
 app.get('/*', (req,res)=>{
-    res.sendFile(path.join(__dirname,'/dist/wheely-good-cars/index.html'));
+    res.sendFile(path.join(__dirname,'/dist/molly-dealership-frontend/index.html'));
 });
 
 app.listen(process.env.PORT || 3000, ()=>{
