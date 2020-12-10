@@ -19,6 +19,7 @@ import { AllcarsComponent } from './components/cars/allcars/allcars.component';
 import { CarCardComponent } from './components/cars/allcars/car-card/car-card.component';
 import { faAngleLeft, faAngleRight, faArrowRight, faCarSide, faCircle, faEdit, faEye, faEyeSlash, faHome, faKey, faPen, faPlus, faSearch, faSignInAlt, faSignOutAlt, faSpinner, faStar, faStarHalfAlt, faTrashAlt, faUpload, faUser, faUserPlus, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { ImportComponent } from './components/cars/import/import.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ImportComponent } from './components/cars/import/import.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     UserService,
